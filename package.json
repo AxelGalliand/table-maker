@@ -1,5 +1,5 @@
 {
-  "name": "AxelGalliand/table-maker",
+  "name": "@AxelGalliand/table-maker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,6 +40,6 @@
     ]
   },
   "publishConfig": {
-    "AxelGalliand:registry": "https://npm.pkg.github.com"
+    "@AxelGalliand:registry": "https://npm.pkg.github.com"
   }
 }
