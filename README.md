@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+## Installation guide for the React Table AG plugin:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. Prerequisites
 
-## Available Scripts
+- [NodesJS (**vestion 16**)] (https://nodejs.org/en/)
 
-In the project directory, you can run:
+If you are working with several versions of NodeJS, we recommend you install [nvm](https://github.com/nvm-sh/nvm). This tool will allow you to easily manage your NodeJS versions.
 
-### `npm start`
+the plugin need too data array :
+ - first one for the columns section, you need a array of objects that use a 
+    "dataField" for the type of the column,
+    "text" for the name of the column,
+    "sortOrder" for the boolean of the sorting (ASC = Ascending/alphabetic order and DSC = Descending/anti alphabetic order),
+    "type" for string or date or number
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    ex: 
+    {
+      dataField: 'firstName',
+      text: 'First Name',
+      sortOrder: "ASC",
+      type: "String",
+    },
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ - second one for the data you want in the table, you'r object property must match with you'r dataField in the culumn array
 
-### `npm test`
+    ex: 
+    {
+        "firstName": "Alice",
+        "lastName": "LAROCHE",
+        "dateBirth": "1990-12-05",
+        "dateStart": "2015-09-20",
+        "street": "12 avenue des roses"
+    },
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 2. Installation command
 
-### `npm run build`
+npm i axelgalliand_table-maker
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 3. Call Part
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+For the calling, you need the too array in a props and call it like :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ <TableMaker columns={columns} rows={data}/>
 
-### `npm run eject`
+## 4. Style Part
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The style is simple for let you the liberty and the personalisation of the table. You can do it juste in adding the class name in the parent element of the table calling. All the name are simple for a good comprehension like : paginate; button; sizeSelect; columnTitle...
