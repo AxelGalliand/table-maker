@@ -21,7 +21,7 @@ the plugin need too data array :
       type: "String",
     },
 
- - second one for the data you want in the table, you'r object property must match with you'r dataField in the culumn array
+ - second one for the data you want in the table, your object property must match with your dataField in the culumn array
 
     ex: 
     {
@@ -34,14 +34,16 @@ the plugin need too data array :
 
 ## 2. Installation command
 
-npm i axelgalliand_table-maker
+`npm i axelgalliand_table-maker`
 
 ## 3. Call Part
 
-For the calling, you need the too array in a props and call it like :
-
- <TableMaker columns={columns} rows={data}/>
+For the calling, you need the two array in a props and call it like :
+`import TableMaker from 'axelgalliand_table-maker/src'` 
+```javascript
+<TableMaker columns={columns} rows={data}/>
+```
 
 ## 4. Style Part
 
-The style is simple for let you the liberty and the personalisation of the table. You can do it juste in adding the class name in the parent element of the table calling. All the name are simple for a good comprehension like : paginate; button; sizeSelect; columnTitle...
+The style is simple for let you the liberty and the customization of the table. You can do it just by adding the class name in the parent element of the table call. All the names are simple for a good comprehension like : paginate; button; sizeSelect; columnTitle...
