@@ -1,6 +1,6 @@
 {
   "name": "axelgalliand_table-maker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "source": "src/index.js",
   "main": "dist/index.js",
@@ -56,6 +56,6 @@
     "url": "https://github.com/AxelGalliand/table-maker/issues"
   },
   "homepage": "https://github.com/AxelGalliand/table-maker#readme",
-  "author": "",
+  "author": "GALLIAND Axel",
   "license": "ISC"
 }

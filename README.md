@@ -14,16 +14,19 @@ the plugin need too data array :
     "type" for string or date or number
 
     ex: 
+``` javascript
     {
       dataField: 'firstName',
       text: 'First Name',
       sortOrder: "ASC",
       type: "String",
     },
+```
 
  - second one for the data you want in the table, your object property must match with your dataField in the culumn array
 
     ex: 
+ ``` javascript   
     {
         "firstName": "Alice",
         "lastName": "LAROCHE",
@@ -31,6 +34,7 @@ the plugin need too data array :
         "dateStart": "2015-09-20",
         "street": "12 avenue des roses"
     },
+```    
 
 ## 2. Installation command
 
